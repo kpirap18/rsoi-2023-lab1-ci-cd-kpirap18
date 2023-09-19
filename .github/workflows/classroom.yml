@@ -15,7 +15,33 @@ jobs:
         with:
           fetch-depth: 0
 
-      # TODO build, test and deploy project
+      - name: Setup Python 3
+        uses: actions/setup-python@v2
+        with:
+           python-version: 3.9
+
+      - name: Install
+        run: |
+            pip install .
+            pip install -r requirements_dev.txt
+
+      - name: Dir
+        run: |
+            pwd
+      
+      - name: Run tests
+        run: |
+            pytest .
+
+      - name: Deploy project
+        uses: ashishkujoy/render-deploy@v1.0.5
+        with:
+          service-id: srv-ck4ltgs2kpls73eplm6g
+          service-key: _2dx92ycxo8
+          api-key: rnd_IoSSfQ8iiO4DENQ0pTwybOgiHcUq
+          max-deployment-wait-ms: 3600000
+          delay-in-ms: 10000
+
 
       - name: Run API Tests
         uses: matt-ball/newman-action@master
