@@ -10,3 +10,6 @@ RUN pip install -r requirements.txt
 RUN pip install -r requirements_dev.txt
 
 # EXPOSE 8080
+
+
+CMD ["sh", "entrypoint.sh"]
