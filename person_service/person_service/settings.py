@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+dot$s$=10t45z+mn&mm_060$n-ikhr92k)ox885o1+*_0j9!l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "person-service-1.onrender.com"]  # "personservice.herokuapp.com"
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "rsoi-lab1-person-service.onrender.com"]
 
 
 # Application definition
